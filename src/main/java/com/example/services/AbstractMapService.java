@@ -11,6 +11,7 @@ public class AbstractMapService {
     protected Map<Integer, DomainObject> domainMap;
 
     public AbstractMapService() {
+
         domainMap = new HashMap<>();
     }
 
@@ -41,6 +42,13 @@ public class AbstractMapService {
     }
 
     private Integer getNextKey(){
-        return Collections.max(domainMap.keySet()) + 1;
+    System.out.println("Got Here");
+    // This is causing an error...if I comment out and hardcode to 1 it works
+        if (domainMap.isEmpty()) {
+            return 1;
+        } else {
+            return Collections.max(domainMap.keySet()) + 1;
+        }
+
     }
 }

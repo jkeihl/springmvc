@@ -29,9 +29,9 @@ public class Customer implements DomainObject{
         this.id = id;
     }
 
-    public Integer getVersion() {        return version;    }
+    public Integer getVersion() { return version;    }
 
-    public void setVersion(Integer version) {        this.version = version;    }
+    public void setVersion(Integer version) { this.version = version;    }
 
     public String getFirstName() {
         return firstName;
